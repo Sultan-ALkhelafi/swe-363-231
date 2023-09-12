@@ -7,6 +7,7 @@
     <meta name="keywords" content="KFUPM, Cousers, rate, Difficulty, resources ">
     <meta name="author" content="Your Name">
 <title> Subjects </title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,34 +15,13 @@
 
     <p> Website for showing Ratings and Reviews of Subjects, so it guieds students to make the best effort in any subject. </p>
 
-    <img src="/Users/sultanalkhleafi/Desktop/SWE 363/Unknown.png" alt="My test image" width="250" />
+    <img src="Unknown.png" alt="My test image" width="250" /><br>
 
-
-    <br>
-        <form action = "">
-            <div>
-                <label> Course</label>
-                <input type="text" name="input" list="courses">    
-                <datalist id ="courses">
-                    <option value="SWE 363"></option>
-                </datalist>
-            </div>
-            <div>
-                <label> Rate  </label>
-                <input type="text">    
-            </div>
-            <div>
-                <label> Instructor</label>
-                <input type="text">    
-            </div>
-            <input type="submit" name="button" value="Submit">
-        </form>
-   
-        <br>
 
         <!--Esersise 2-->
 
-        <a href="file:///Users/sultanalkhleafi/Desktop/SWE%20363/Details%20page.html">
+
+        <a href="Details page.html">
             Details Page
           </a>
 
@@ -116,6 +96,52 @@
     
 </table>
  
+
+<br>
+
+<title> Contributr in Courses </title>
+        <form action = "">
+            <div>
+                <label> Course: </label><br>
+                <input type="text" name="input" list="courses">    
+                <datalist id ="courses">
+                    <option value="SWE 363"></option>
+                    <option value="SWE 387"></option>
+                    <option value="ENG 214"></option>
+                    <option value="ICS 321"></option>
+                    <option value="STAT 319"></option>
+                </datalist>
+            </div>
+            <br>
+            <div>
+                <label> Rate: </label><br>
+                <input type="text">    
+            </div>
+            <br>
+            <div>
+                <label> Instructor: </label><br>
+                <input type="text">    
+            </div>
+            <br>
+
+            <form action="" autocomplete="on">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" autocomplete="off"><br><br>
+              </form>
+
+              <label for="phone">Enter a phone number: </label><br>
+            <input type="tel" id="phone" name="phone" placeholder="0500000000"><br><br>
+            
+
+            <a href="ThankPage.html">
+                <input type="submit" name="button" value="Submit">
+              </a>
+
+        </form>
 
 </body>
 </html>
