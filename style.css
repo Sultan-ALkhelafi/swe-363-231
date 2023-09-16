@@ -3,5 +3,19 @@ body{
 }
 
 a {
-    color: blue;
+    color: green;
+}
+
+thead {
+    text-transform: uppercase;
+    
+
+}
+
+.top{
+    background-color: red;
+}
+
+.em{
+    background-color: blue;
 }
