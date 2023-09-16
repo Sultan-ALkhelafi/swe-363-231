@@ -24,3 +24,64 @@ em{
     text-transform: uppercase;
     background-color: gold;
 }
+
+h2{
+    font-family: sans-serif ;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: capitalize;
+  }
+
+  h2 + p:first-letter {
+    font-size: x-large;
+  }
+
+  table tr:hover {
+    background-color: lightgrey; 
+  }
+
+  table tr:hover td {
+    background-color: inherit;
+  }
+
+li.navitem {
+    display: inline; 
+    text-decoration: none;
+}
+li.navitem a{
+    text-decoration: none;
+}
+
+#Details{
+      text-decoration: underline;  
+}
+
+/* Apply alternating background colors to table rows */
+table tbody tr:nth-child(odd) {
+    background-color: #9ead84;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #84daf0; 
+  }
+  
+  ::selection {
+    background-color: #ffcc00; 
+    color: #000; 
+  }
+a:hover {
+    cursor: default ;
+  }
+body a:hover:not(nav a) {
+    cursor: pointer ;
+  }
+
+  input, textarea{
+      height: 20px;
+      border-color: lightgrey;
+  }
+
+  input[name="message"] {
+    height: 50px;
+  }
