@@ -109,3 +109,43 @@ padding: 15px 25px;
 align-items: center;
 gap: 15px;
 }
+
+.color-change-button {
+    padding: 10px 20px;
+    background-color: #343a3f;
+    color: rgb(39, 28, 28);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Change button background color on hover */
+.color-change-button:hover {
+    background-color: #2980b9;
+}
+
+
+/* Hamburger button styles */
+.hamburger-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: rgb(97, 42, 42);
+    cursor: pointer;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translateX(20px); /* Initially moved to the right */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Show the menu on hover with a delay */
+.navbar:hover .hamburger-menu {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s; /* Delay the transition */
+}
