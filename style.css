@@ -85,3 +85,17 @@ body a:hover:not(nav a) {
   input[name="message"] {
     height: 50px;
   }
+
+  body{ 
+  color: var(--second-text-color, rgb(39, 79, 124) );
+  text-align: center;
+  
+  /* paragraph */
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.2px;
+
+}
