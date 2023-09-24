@@ -99,3 +99,13 @@ body a:hover:not(nav a) {
   letter-spacing: 0.2px;
 
 }
+
+
+button{
+    border-radius: 5px;
+background: var(--primary-color, #23A6F0);
+display: flex;
+padding: 15px 25px;
+align-items: center;
+gap: 15px;
+}
