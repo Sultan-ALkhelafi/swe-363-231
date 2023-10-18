@@ -12,7 +12,34 @@
 
 <body>
 
+    <a href="#" id="help-link">Keyboard Navigation Guide</a>
  
+    <div id="help-popup" class="hidden">
+        <h2>Keyboard Navigation Guide</h2>
+        <p>Use the <strong>Tab</strong> key to move forward through links and form elements.</p>
+        <p>Use <strong>Shift + Tab</strong> to move backward.</p>
+        <p>Press <strong>Enter</strong> to activate links and buttons.</p>
+        <button onclick="closeHelpPopup()">Close</button>
+
+        <script>
+     
+     function closeHelpPopup() {
+    document.getElementById('help-popup').classList.add('hidden');
+}
+     document.getElementById('help-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default action of the link
+    let popup = document.getElementById('help-popup');
+    if (popup.classList.contains('hidden')) {
+        popup.classList.remove('hidden');
+    } else {
+        closeHelpPopup();
+    }
+});
+
+        </script>
+
+    </div>
+
 
     <header>
 
