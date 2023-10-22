@@ -86,6 +86,42 @@
 
         <br>
 
+        <section id="university-selection-section">
+            <label for="university-select">Choose a University:</label>
+            <select id="university-select">
+                <!-- Options will be populated from the API -->
+            </select>
+            <div id="selected-university-details">
+                <!-- Details of the selected university will be displayed here -->
+            </div>
+        </section>
+
+        <script>
+            async function fetchUniversities() {
+                try {
+                    const response = await fetch('http://universities.hipolabs.com/search?name=middle');
+                    const universities = await response.json();
+                    console.log("Fetched universities:", universities); // Log the fetched data
+        
+                    const universitySelect = document.getElementById('university-select');
+                    universitySelect.innerHTML = '<option value="">Select a University</option>'; // Default option
+        
+                    universities.forEach(university => {
+                        const option = document.createElement('option');
+                        option.value = university.name;
+                        option.textContent = university.name;
+                        universitySelect.appendChild(option);
+                    });
+                } catch (error) {
+                    console.error('Error fetching universities:', error);
+                }
+            }
+        
+            fetchUniversities();
+        </script>
+        
+
+        
 
 <!--Exresise 3-->
 
