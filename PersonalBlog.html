@@ -236,6 +236,44 @@
         </form>
     </section>
 
+
+    <section>
+        <label>Upload your signature:</label><br>
+        <input type="file" id="signatureUpload" accept="image/*"><br>
+        <canvas id="signatureCanvas" width="400" height="200" style="border:1px solid #000;"></canvas>
+    </section>
+
+    <script>
+     const canvas = document.getElementById('signatureCanvas');
+const ctx = canvas.getContext('2d');
+
+document.getElementById('signatureUpload').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const img = new Image();
+            img.onload = function() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            }
+            img.src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+    }
+});
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    let signatureData = canvas.toDataURL();
+    document.getElementById('signatureData').value = signatureData;
+});
+    </script>
+
+<input type="hidden" id="signatureData" name="signatureData">
+
+
+
+
     <footer>
         <p>Refrences</p>
         <p><a href="sultan.dim@gmail.com">sultan.dim@gmail.com</a></p>
