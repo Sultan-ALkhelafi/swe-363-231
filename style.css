@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: capitalize;
   }
 
-  h2 + p:first-letter {
+  h2 + p::first-letter {
     font-size: x-large;
   }
 
@@ -160,4 +160,34 @@ gap: 15px;
   padding: 20px;
   z-index: 1000;
   border: 1px solid #ccc;
+}
+
+
+.image{
+  display: flex;
+  float: right;
+}
+
+
+.article{
+  position: relative;
+  padding: 50px 50px 50px 50px;
+}
+.date, .para{
+  display: inline;
+  position: absolute;
+  
+}
+
+.date{
+  position: right;
+  right: 0;
+}
+
+.para{
+  left: 0;
+}
+
+.Watermark{
+  position: absolute;
 }
