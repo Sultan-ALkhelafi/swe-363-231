@@ -288,4 +288,45 @@ document.querySelector('form').addEventListener('submit', function(event) {
       </footer>
 
 </body>
+
+
+<script>
+
+//JavaScript code to create a Popup class and use it for handling the help popup
+
+js_popup_class = """
+class Popup {
+    constructor(elementId) {
+        this.popupElement = document.getElementById(elementId);
+    }
+
+    show() {
+        this.popupElement.classList.remove('hidden');
+    }
+
+    hide() {
+        this.popupElement.classList.add('hidden');
+    }
+
+    toggle() {
+        if (this.popupElement.classList.contains('hidden')) {
+            this.show();
+        } else {
+            this.hide();
+        }
+    }
+}
+
+const helpPopup = new Popup('help-popup');
+
+document.getElementById('help-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default action of the link
+    helpPopup.toggle();
+});
+
+function closeHelpPopup() {
+    helpPopup.hide();
+}
+
+</script>
 </html>
