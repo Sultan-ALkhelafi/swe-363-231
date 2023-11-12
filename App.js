@@ -22,4 +22,30 @@ function App() {
   );
 }
 
+
+const CustomEmitter = require('./customEmitter');
+const emitter = new CustomEmitter();
+
+// Function to generate a random number between min and max seconds
+const randomSeconds = (min, max) => Math.random() * (max - min) + min;
+
+// Handle 'userLoggedIn' event
+emitter.on('userLoggedIn', (user) => {
+    console.log(`${new Date().toISOString()}: ${user} logged in`);
+});
+
+// Simulate user login at random intervals
+let userCount = 0;
+const simulateUserLogin = () => {
+    const user = `USER_${++userCount}`;
+    emitter.emit('userLoggedIn', user);
+
+    // Schedule the next user login
+    setTimeout(simulateUserLogin, randomSeconds(100, 2000)); // 0.1 to 2 seconds
+};
+
+// Start the simulation
+simulateUserLogin();
+
+
 export default App;
