@@ -73,3 +73,14 @@ app.use('/', router); // Use the router
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
+
+
+app.use(express.urlencoded({ extended: true })); // To parse URL-encoded data
+
+// Middleware to process form
+app.post('/submit-form', (req, res) => {
+  const formData = req.body;
+  console.log('Form Data:', formData);
+  res.send('Form submission received!');
+});
+
