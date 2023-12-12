@@ -1,3 +1,22 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the Home Page!');
+});
+
+app.get('/about', (req, res) => {
+  res.send('This is the About Page');
+});
+
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
+
+
+
+
 // Requiring module
 const express = require("express");
 const fs = require("fs");
